@@ -1,38 +1,63 @@
+@font-face {
+    font-family: future;
+    font-weight: bold;
+    src: url('assets/fonts/Futura\ Bold\ font.ttf');
+}
+
+@font-face {
+    font-family: future;
+    font-weight: normal;
+    src: url('assets/fonts/futura\ light\ bt.ttf');
+}
+
+@font-face {
+    font-family: future;
+    font-weight: 500;
+    src: url('assets/fonts/futura\ medium\ bt.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: future;
+}
+
+body {
+    background: black;
 }
 
 .page {
-    position: relative;
     z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     padding: 60px 0 36px 150px;
+    background: black;
+    width: 100%;
+    min-width: 600px;
 }
 
 .navbar {
-    margin-bottom: 20vh;
+    margin-bottom: 190px;
 }
 
 .title {
     font-size: 100px;
     line-height: 111px;
-    margin-bottom: 2vh;
+    margin-bottom: 14px;
 }
 
 .sub-title {
     font-size: 32px;
     line-height: 42px;
+    font-weight: 500;
 }
 
 .info {
-    margin-top: 5vh;
+    margin-top: 230px;
     display: flex;
     align-items: center;
 }
@@ -42,17 +67,19 @@
     font-weight: bold;
 }
 
+.info-address {
+    display: flex
+}
+
 .info-phone a {
     text-decoration: none;
-
 }
 
 .image-turbine {
     position: absolute;
-    max-width: 400px;
 
-    bottom: 20%;
-    right: 20%;
+    bottom: 15vh;
+    right: 60%;
     z-index: 3;
 }
 
@@ -70,32 +97,26 @@
 
 .wrapper {
     width: 100%;
-    height: 100vh;
-    background: black;
-}
-
-.black-bg {
-    background-color: black;
-    width: 80%;
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
-}
-
-.image-black {
-    position: absolute;
-    width: 80%;
-    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .image-plain {
-    position: absolute;
-    right: 0;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
     height: 100%;
 }
 
+.image-plain__wrapper {
+    position: relative;
+}
+
+
 .cory-right {
+    position: absolute;
+    bottom: 36px;
     margin-top: 10vh;
     opacity: 0.7;
 }
@@ -114,6 +135,6 @@
 
     .image-turbine {
         max-width: 300px;
-        right: 16%;
+        left: -73%;
     }
 }
